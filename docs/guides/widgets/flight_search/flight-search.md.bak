@@ -1,0 +1,83 @@
+### Flight Search Widget
+This widget is used to overlay entry requirement information onto a flight search bar or within a set of search results. The widget will passively listen to the elements used within the flight search bar and attempt to determine the departure and destination from the values chosen by the user. This is mostly done through detection of airport codes. If the funtionality is not performing good matches, the departure and destination can also be set programatically.
+
+Setup of the widget is similar to others:
+
+```
+<form id=\"form1\">
+<!-- this is an overly simplistic example. inputs below could be selects, etc. -->
+<input id=\"departureTxt\" />
+<input id=\"destinationTxt\" />
+<div id=\"prompt-container\">
+</form>
+...
+
+<script src=\"assets/sitata-travel-search.js\"></script>
+
+</body>
+```
+
+and
+
+```
+function doRestrictions() {
+          var depTxt = document.getElementById(\"departureTxt\")
+      var destTxt = document.getElementById(\"destinationTxt\")
+
+      var promptCont = document.getElementById(\"prompt-container\")
+
+      Sitata.travelSearch
+              .setAuthToken(\"PUB AUTH_TOKEN_HERE\")
+              .setOrganizationId(\"ORG_ID_HERE\")
+
+        // test txt inputs
+                .setDepartureInputEl(depTxt)
+                .setDestinationInputEl(destTxt)
+
+        
+                .setPromptEl(promptCont)
+
+        .run()
+
+        // example of setting values programatically
+                setTimeout(function() {
+                      Sitata.travelSearch.showPanel(true)
+                  Sitata.travelSearch.setDestinationCode(\"CA\")
+                  Sitata.travelSearch.setDepartureCode(\"GB\")
+                  Sitata.travelSearch.setNationality(\"AR\")
+                  
+                  // Sitata.travelSearch.setDepartureAirportCode(\"BOM\")
+                  // Sitata.travelSearch.setDestinationAirportCode(\"LGW\")
+                }, 5000)
+        }
+        window.document.addEventListener('sitata:travelSearchReady', doRestrictions)
+        ```
+
+#### Methods
+
+| Parameter | Description |
+| --------- | ----------- |
+| setAuthToken(\"PUB TOKEN_HERE\") | See setup example above. Requires your auth token.
+| setOrganizationId(orgId) | Requires your organization identifier as a string.
+| setNationality(code) | Exepects a 2 character country code
+| setDepartureInputEl(el) | Expects an HTML element to listen to for departure.
+| setDestinationInputEl(el) | Expects an HTML element to listen to for destination.
+| setDepartureCode(code) | 2 character country code. To manually specify the departure.
+| setDestinationCode(code) | 2 character country code. To manually sepcify the destination.
+| setDepartureDate(date) | Expects a javascript date. To manually sepecify the departure date.
+| setNationality(code) | Exepects a 2 character country code.
+| setDepartureAirportCode(code) | Expects an IATA airport code. To manually specify the departure airport.
+| setDestinationAirportCode(code) | Expects an IATA airport code. To manually specify the destination airport.
+| setPromptEl(el) | Expects an HTML element where prompt text will be inject to inform the user that restritions are in place.
+| showPanel(bool) | Can be true or false to show or hide the panel.
+
+#### Events
+The following events are available
+
+| Name | Description |
+| ---- | ----------- |
+| sitata:travelSearchReady | Fired when the widget has been downloaded and is ready to be initalized.
+
+
+"
+  

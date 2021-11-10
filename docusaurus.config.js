@@ -28,6 +28,16 @@ const config = {
   ],
   presets: [
     [
+      'redocusaurus',
+      {
+        specs: [{
+          spec: 'openapi.yaml',
+          // specUrl: 'https://redocly.github.io/redoc/openapi.yaml',
+          routePath: '/api/',
+        }],
+      }
+    ],
+    [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -65,12 +75,13 @@ const config = {
             position: 'left',
             label: 'Guides',
           },
-          {
-            type: 'doc',
-            docId: 'api/api',
-            position: 'left',
-            label: 'API',
-          },
+          {to: '/api', label: 'API', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'api/api',
+          //   position: 'left',
+          //   label: 'API',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.sitata.com',
