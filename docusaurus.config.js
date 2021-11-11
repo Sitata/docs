@@ -35,6 +35,10 @@ const config = {
           // specUrl: 'https://redocly.github.io/redoc/openapi.yaml',
           routePath: '/api/',
         }],
+        theme: {
+          primaryColor: '#d69d43'
+          // redocOptions: { hideDownloadButton: false },
+        },
       }
     ],
     [
@@ -97,43 +101,43 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Start Here',
+                to: '/docs/',
               },
             ],
           },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/docusaurus',
+          //     },
+          //     {
+          //       label: 'Twitter',
+          //       href: 'https://twitter.com/docusaurus',
+          //     },
+          //   ],
+          // },
           {
             title: 'More',
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://blog.sitata.com',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/sitata/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Sitata, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -141,7 +145,7 @@ const config = {
       },
       gtag: {
         // You can also use your "G-" Measurement ID here.
-        trackingID: 'UA-141789564-1',
+        trackingID: 'G-X38F53JSG1',
         // Optional fields.
         anonymizeIP: false, // Should IPs be anonymized?
       },

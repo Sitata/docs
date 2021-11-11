@@ -8,6 +8,13 @@ id: intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
+TODO's
+* main welcome page
+* how do I? sections
+* main splash page (welcome, guides, API reference)
+* Sitata API status page
+
+
 ## Getting Started
 
 Get started by **creating a new site**.
