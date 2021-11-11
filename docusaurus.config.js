@@ -17,14 +17,14 @@ const config = {
   projectName: 'Sitata Docs', // Usually your repo name.
   plugins: [
     // for google analytics
-    '@docusaurus/plugin-google-gtag',
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5
-      },
-    ],
+    // '@docusaurus/plugin-google-gtag',
+    // [
+    //   '@docusaurus/plugin-sitemap',
+    //   {
+    //     changefreq: 'weekly',
+    //     priority: 0.5
+    //   },
+    // ],
   ],
   presets: [
     [
@@ -148,7 +148,7 @@ const config = {
         trackingID: 'G-X38F53JSG1',
         // Optional fields.
         anonymizeIP: false, // Should IPs be anonymized?
-      },
+      }
     }),
 };
 

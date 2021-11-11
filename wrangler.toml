@@ -1,0 +1,10 @@
+name = "sitata-docs"
+type = "webpack"
+route = 'https://docs.sitata.com/*'
+zone_id = 'c9cc6a0dfab204c3bb455f39ef47f9cc'
+usage_model = ''
+compatibility_flags = []
+workers_dev = false
+account_id = '63c423b0d137a1e09a365d7216f2c482'
+site = {bucket = "./build",entry-point = "workers-site"}
+compatibility_date = "2021-11-11"

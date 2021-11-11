@@ -29,8 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Sitata API Documentation`}
+      description="Sitata API documentation for COVID-19 entry requirements and embedded travel insurance.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
