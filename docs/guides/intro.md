@@ -6,39 +6,21 @@ id: intro
 
 # Welcome!
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Sitata's API is the easiest way to address your traveller's needs in a post-COVID-19 world. Our API will let you:
 
-TODO's
-* main welcome page
-* how do I? sections
-* main splash page (welcome, guides, API reference)
-* Sitata API status page
-
+* Inform your customers about the latest entry requirements for their journey
+* Help your travellers understand which local travel and entertainment restrictions are in place
+* Update your customers about any potential threat or disruption
+* Enroll your travellers in a Sitata Travel Safe Membership
+* Embed an insurance and travel assistance offering in your purchase journey
 
 ## Getting Started
 
-Get started by **creating a new site**.
+The best place to start is by browsing our guides which will help you undersand how to interact with our API. Use the navigation menu to skip between sections. The next section will outline the [basics of our API](./api/api.md). We also have a series of ["How To" articles](./how_to/how-to.md) for your reference.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-## Generate a new site
+## Skip to the Good Stuff
 
-Generate a new Docusaurus site using the **classic template**:
+If you're eager to dig into our API or already have access, feel free to skip straight to our [API reference](/api) and start experimenting!
 
-```shell
-npm init docusaurus@latest my-website classic
-```
 
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.

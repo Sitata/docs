@@ -22,6 +22,7 @@
   --ifm-link-color: var(--ifm-color-primary-darker);
   --ifm-menu-color-active: var(--ifm-color-primary-darker);
   --ifm-navbar-link-hover-color: var(--ifm-color-primary-darker);
+
 }
 
 .docusaurus-highlight-code-line {
@@ -33,4 +34,14 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.button--secondary:not(.button--outline) {
+  background-color: var(--sitata-light-blue);
+}
+
+.button.button--secondary {
+    color: var(--sitata-dark-blue);
+    border: 1px solid var(--sitata-dark-blue);
 }

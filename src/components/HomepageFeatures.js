@@ -4,32 +4,29 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Pre-travel info',
+    Svg: require('../../static/img/undraw_travelers_re_y25a.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Sitata can help your travellers understand their COVID-19 entry requirements, travel restrictions, recommended vaccinations, the regional safety and security situation and a wealth of other pre-travel information.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Real-time disruption warnings',
+    Svg: require('../../static/img/undraw_notify_re_65on.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We monitor the world 24/7 for threats and disruptions. Keep your travellers out of harm's way by letting them know about events that could disrupt their travels like a planned protest or even something severe such as a violent bombing.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Travel Safe Subscriptions',
+    Svg: require('../../static/img/undraw_active_support_re_b7sj.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        You can also use our API to resell our Travel Safe Subscriptions and insurance and assistance offerings.
       </>
     ),
   },

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /using-api
+slug: /about-api
 id: api
 ---
 

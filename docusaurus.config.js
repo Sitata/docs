@@ -48,7 +48,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/Sitata/docs/edit/main/',
         },
         // blog: {
         //   showReadingTime: true,
@@ -106,23 +106,23 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Status',
+                href: 'https://www.sitata-status.com',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/sitata.goanywhere',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
+            ],
+          },
           {
             title: 'More',
             items: [
