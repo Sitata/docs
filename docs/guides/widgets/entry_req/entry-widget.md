@@ -55,4 +55,25 @@ function startWidget() {
 window.document.addEventListener("sitata:covidMapReady", startWidget);
 ```
 
+## CSS Styles Recommendations
+
+If you intend on using the map widget with the map displayed, we recommend fixing the height of the widget for screen sizes larger than tablet.
+
+```css
+.sit-map-app {
+  width: 100%;
+  /* as an example */
+  height: 90vh;
+}
+
+@media screen and (max-width: 768px) {
+  /* full height on tablets and smaller */
+  .sit-map-app {
+    height: 100%;
+  }
+}
+```
+
+Feel free to experiment with your own css overrides.
+
 Next we will explain configuration options.
