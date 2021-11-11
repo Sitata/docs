@@ -28,6 +28,16 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
+Use the following to deploy:
+
+```
+wrangler publish
+```
+Reference: [https://developers.cloudflare.com/workers/platform/sites](https://developers.cloudflare.com/workers/platform/sites)
+
+
+If we switch to github, the following instructions would apply.
+
 ```
 $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```

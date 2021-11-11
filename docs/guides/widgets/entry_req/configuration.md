@@ -45,8 +45,8 @@ The following configuration options are available:
 | entryColors | Object | An object describing a color set for use on the map. See below.
 | colorBlindEntryColors | Object | An object describing a color set for use on the map for color blind users. See below.
 | irregularFillColors | Object | An object describing a color set for use on the map for regions that are not covered. See below.
-| showHeader | Boolean | If false, will hide the search header.
-| showMap | Boolean | If false, will hide the map.
+| hideHeader | Boolean | If true, will hide the search header.
+| hideMap | Boolean | If true, will hide the map.
 
 ### Travel Restriction Exclusions
 
@@ -125,8 +125,8 @@ The following functions are available:
 | setTransitCode | (String) | Set the transit country of the first segment
 | setVaccinated | (Boolean) | Set the vaccination status
 | setDepartureDate | (String) | Set the departure date
-| setShowHeader | (Boolean) | Show or hide the search header
-| setShowMap | (Boolean) | Show or hide the map
+| setHideHeader | (Boolean) | Show or hide the search header
+| setHideMap | (Boolean) | Show or hide the map
 | doSearch() | () | Execute a search programatically
 
 ## Events
