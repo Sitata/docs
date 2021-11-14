@@ -47,6 +47,7 @@ The following configuration options are available:
 | irregularFillColors | Object | An object describing a color set for use on the map for regions that are not covered. See below.
 | hideHeader | Boolean | If true, will hide the search header.
 | hideMap | Boolean | If true, will hide the map.
+| prioritySorted | Boolean | If true, will sort entry requirements by priority.
 
 ### Travel Restriction Exclusions
 
@@ -127,6 +128,7 @@ The following functions are available:
 | setDepartureDate | (String) | Set the departure date
 | setHideHeader | (Boolean) | Show or hide the search header
 | setHideMap | (Boolean) | Show or hide the map
+| setPrioritySorted | (Boolean) | If true, will sort entry requirements by priority. Default is false.
 | doSearch() | () | Execute a search programatically
 
 ## Events
