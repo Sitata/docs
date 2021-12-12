@@ -42,14 +42,14 @@ function startWidget() {
   // your organization's identifier
   var orgId = "f2df778c-32d1-4931-8122-c2b2310f49fd";
 
-  Sitata.covidMap.inject(el, {
+  let widget = new window.Sitata.covidMap(el, {
     token: token,
-    orgId: id,
+    orgId: orgId,
     // disable airport search
     disableAirport: true,
-  });
+  }).run()
   
-  // inject your own google analytics property
+  // inject your own google analytics property - this can occur after cookie acceptance
   window.Sitata.covidMap.injectAnalytics('G-427FFKCWBT')
 }
 window.document.addEventListener("sitata:covidMapReady", startWidget);

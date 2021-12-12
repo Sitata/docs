@@ -15,7 +15,8 @@ let options = {
     disableAirport: true,
 };
 
-Sitata.covidMap.inject(el, options);
+let widget = new window.Sitata.covidMap(el, options)
+widget.run()
 ```
 
 
@@ -129,7 +130,21 @@ The following functions are available:
 | setHideHeader | (Boolean) | Show or hide the search header
 | setHideMap | (Boolean) | Show or hide the map
 | setPrioritySorted | (Boolean) | If true, will sort entry requirements by priority. Default is false.
+| removeSegment | (Integer) | Will remove a segment based on the index (0-based) given.
+| addSegment | (Object) | Add a segment. See below.
 | doSearch() | () | Execute a search programatically
+
+### Segment
+
+When adding a segment, you should specify an object with the following properties:
+
+| property | type | description |
+| -------- | ---- | ----------- |
+| departure | String | The [ISO 3166 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code to prepopulate the departure. e.g. CA for Canada
+| transit | String | The [ISO 3166 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code to prepopulate the transit country. e.g. ES for Spain
+| destination | String | The [ISO 3166 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code to prepopulate the destination. e.g. IN for India
+| departureDate | Date | A javascript date object for the departure date.
+
 
 ## Events
 
