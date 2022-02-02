@@ -19,7 +19,7 @@ To start, make a reference to the widget javascript in your html layout and add 
 <div id="widget-container">
 <!-- widget will be inserted here -->
 </div>
-<script async type="text/javascript" src="https://www.sitata.com/widgets/sitata-covid-map-v2.js"></script>
+<script async type="text/javascript" src="https://www.sitata.com/widgets/sitata-covid-map-v3.js"></script>
 ```
 
 Next, you will need to wait for the widget to inject itself into the page before you can configure it. You can do this by listening on the document object for the `sitata:covidMapReady` event.
@@ -38,9 +38,9 @@ function startWidget() {
   // initialize the widget here
   var el = document.getElementById("widget-container");
   // your organization's public token
-  var token = "cf25bcd2-ac18-45e4-bbc1-0ba5b64de489";
+  var token = "<YOUR TOKEN HERE>";
   // your organization's identifier
-  var orgId = "f2df778c-32d1-4931-8122-c2b2310f49fd";
+  var orgId = "<YOUR ORG ID HERE>";
 
   let widget = new window.Sitata.covidMap(el, {
     token: token,

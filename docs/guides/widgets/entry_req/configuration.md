@@ -153,15 +153,16 @@ The following events are available and are triggered on the window `document` ob
 | Event Name | Description |
 | ---------- | ----------- |
 | sitata:covidMapReady | Fired when the widget has been downloaded and is ready to be initalized.
-| sitata:nationality | Fired when the nationality value changes. Event details contain the country selected.
-| sitata:departure | Fired when the departure value changes. Event details contain the country selected.
-| sitata:destination | Fired when the destination value changes. Event details contain the country selected.
-| sitata:transit | Fired when the transit value changes. Event details contain the country selected.
+| sitata:selectCountry | Fired when a country is selected. Event details contain the country selected and for which field.
+| sitata:entryClick | Fired when an entry requirement is clicked. Event details contain the country and type of restriction.
+| sitata:restrictionClick | Fired when a local travel restriction clicked. Event details contain the country and type of restriction.
+| sitata:vaccinatedClick | Fired when the user has selected a vaccination status. Event details contain the value selected.
+| sitata:doSearch | Fired when the user has made a search request.
 
 Example:
 
 ```
-window.document.addEventListener("sitata:departure", function(event) {
+window.document.addEventListener("sitata:selectCountry", function(event) {
     let value = event.details
     console.log('value', value)
 });
