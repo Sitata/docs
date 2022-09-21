@@ -15,11 +15,13 @@ The process behaves according to the following rules:
 
 2. If the user has a trip record with a `Destination` that specifies an entire country (instead of a city, e.g. type=1), and the `Alert` specifies the same country, and the `start` date of the alert corresponds to the Destination's `entry_date` and `exit-date`, then notify the users of that trip. This rule **does not apply** if the Trip record contains itinerary (`Trip Segment`) items within the country that overlap with the Alert.
 
-3. If the user has a trip record with itinerary (`Trip Segment`) items that overlap with the Alert's `start` date and that are either: A) located in close proximity to one of the `Alert`'s loctions; or B) located within one of the `Alert`'s specified geographies, then notify the user.
+3. If the user has a trip record with itinerary (`Trip Segment`) items that overlap with the Alert's `start` date and that are either: A) located in close proximity to one of the `Alert`'s locations; or B) located within one of the `Alert`'s specified geographies, then notify the user.
 
-4. If the user has a recent (withn 2 days of the Alert `start` datetime) `CheckIn` with a location that is either: A) located in close proximity to one of the `Alert`'s loctions; or B) located within one of the `Alert`'s specified geographies, then notify the user.
+4. If the user has a recent (within 2 days of the Alert `start` datetime) `CheckIn` with a location that is either: A) located in close proximity to one of the `Alert`'s locations; or B) located within one of the `Alert`'s specified geographies, then notify the user.
 
-From the above rules, you might be able to deduce that if the user has a recent `CheckIn` or a `Trip` record with either: A) Destinations that are **not** country-level (type=0); and/or B) itineary information, then the notifications will be very much targeted for the user's exact location or travel plans. This is the optimum scenaio.
+5. If the user has a flight in our system that matches an airline or airport specified by the Alert, then notify the user.
+
+From the above rules, you might be able to deduce that if the user has a recent `CheckIn` or a `Trip` record with either: A) Destinations that are **not** country-level (type=0); and/or B) itinerary information, then the notifications will be very much targeted for the user's exact location or travel plans. This is the optimum scenario.
 
 Conversely, if the User's location is unknown and/or the Trip record is very granular with only country-level information specified, then the User might be delivered information about a country that they are visiting, but for a region that they have no intention of being in (since Sitata takes a conservative approach if the granular information is not available through rules #1 and #2)
 
