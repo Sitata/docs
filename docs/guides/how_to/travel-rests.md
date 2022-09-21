@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 89
 slug: /travel-restrictions-search
 id: how-travel-rests
 ---
 
-# How Do I Get The Latest Travel Restrictions?
+# Get The Latest Travel Restrictions
 
 The Sitata API also captures the local travel restriction situation. We are often capturing important situational details for travellers such as the regional social distancing measures and mask-wearing requirements.
 

@@ -5,7 +5,7 @@ title: Getting Started
 
 # Country Health Widget
 
-This widget will allow you to display country health recommendations on your own website with veyr little effort. The content covers diseases to be aware of, recommended vaccinations, and recommended medications. The widget will inject the content into your page without styling which allows you to have full control of the final display.
+This widget will allow you to display country health recommendations on your own website with very little effort. The content covers diseases to be aware of, recommended vaccinations, and recommended medications. The widget will inject the content into your page without styling which allows you to have full control of the final display.
 
 ## Getting Started
 

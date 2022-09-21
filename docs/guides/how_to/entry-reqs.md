@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 8
 slug: /travel-entry-requirements-search
 id: how-entry-req
 ---
 
-# How Do I Get The Latest Entry Requirements?
+# Get The Latest Entry Requirements
 
 Without question, the first questions a traveller ask are “can I go there?” and “will I be quarantined” and so this is a good place to start. We created the Entry Requirements data set to answer the hard “yes/no” types of questions concerning entering a country or region.
 
