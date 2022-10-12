@@ -25,6 +25,8 @@ From the above rules, you might be able to deduce that if the user has a recent 
 
 Conversely, if the User's location is unknown and/or the Trip record is very granular with only country-level information specified, then the User might be delivered information about a country that they are visiting, but for a region that they have no intention of being in (since Sitata takes a conservative approach if the granular information is not available through rules #1 and #2)
 
+Note that we do begin sending Alerts up to 14 days prior to a user's travels and throughout the duration of their trip (or anytime based on their GPS location if their account has recent CheckIn records). To receive any Alerts, Users must have either an active Subscription or your organization must have the "Whitelabel" package setting (contact us to learn more).
+
 :::tip
 
 For the best user experience, ensure that Sitata has granular location information about your users through city or regional `Destination` records in a `Trip`, itinerary information (`AirSegment`, `HotelSegment`, etc) in a Trip, or exact locations through `CheckIn`s.
