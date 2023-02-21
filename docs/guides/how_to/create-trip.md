@@ -15,7 +15,7 @@ Trips will allow your travellers to have a central record to organize their itin
 * `Cruise Segments` which keep track of cruise itinerary information
 * `Activity Segments` which keep track of general trip activities
 
-To create a trip for one or more of your travellers, you should issue a `POST` request against the `/org/:organization_id/trips` endpoint. You should specify all of the necsesary trip details along with the Sitata `id` of each traveller (`User`) as a list under the `traveller_ids` field.
+To create a trip for one or more of your travellers, you should issue a `POST` request against the `/org/:organization_id/trips` endpoint. You should specify all of the necessary trip details along with the Sitata `id` of each traveller (`User`) as a list under the `traveller_ids` field.
 
 Additional details can be found [here](/api#tag/Organization-greater-Trips/paths/~1api~1v2~1org~1{company_id}~1trips/post).
 

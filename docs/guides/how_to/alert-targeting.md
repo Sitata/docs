@@ -6,7 +6,7 @@ id: alert-targeting
 
 # Ensure The Alerts Are Not Noisy
 
-Sitata strives to deliver the right information to the right person at the right time. Our process to accomplish this is based on how much we know about the location of the user. If we do not have a granular understanding of the user's location, our system will likely choose to inform the uesr about all events occuring in the country they are located within as a conservative approach. Conversely, if we know the itinerary or exact location of a user, then the system will be able to accurately target the delivery of information to only events which could affect the user.
+Sitata strives to deliver the right information to the right person at the right time. Our process to accomplish this is based on how much we know about the location of the user. If we do not have a granular understanding of the user's location, our system will likely choose to inform the user about all events occurring in the country they are located within as a conservative approach. Conversely, if we know the itinerary or exact location of a user, then the system will be able to accurately target the delivery of information to only events which could affect the user.
 
 The process behaves according to the following rules:
 

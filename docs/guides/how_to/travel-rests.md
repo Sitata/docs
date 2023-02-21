@@ -15,7 +15,7 @@ The data set includes the following categories:
 * What are the local transportation restrictions?	
 * What is the recommended border app?
 * Are non-essential shops open?
-* Are accomodations open?
+* Are accommodations open?
 * Are restaurants open?
 * Are bars and cafes open?
 * Are beaches and tourism spots open?
