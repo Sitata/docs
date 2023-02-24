@@ -1,5 +1,5 @@
 ---
-sidebar_position: 89
+sidebar_position: 8
 slug: /travel-restrictions-search
 id: how-travel-rests
 ---

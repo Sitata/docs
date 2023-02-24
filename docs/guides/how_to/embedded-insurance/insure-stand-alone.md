@@ -1,10 +1,10 @@
 ---
-sidebar_position: 10
-slug: /embedded-insurance-stand-alone
+sidebar_position: 3
+slug: /embedded-insurance-/stand-alone
 id: insure-list-stand-alone
 ---
 
-# Insurance: Stand-alone Products
+# Stand-alone Insurance Products
 
 Stand-alone products are meant to be sold as a single purchase with no upgrades or other special circumstances. Sitata's assistance only products are an example of a Stand-alone purchase. Other insurance-related products may also be considered as Stand-alone.
 
@@ -27,4 +27,6 @@ Stand-alone products will not be associated with any tiered products or upgrade 
 
 In other words, if there are no tiered products or upgrade products associated with the product offered, then the product must be a Stand-alone product.
 
-If you have identified the right product to sell, you can then please proceed to the Quote process.
+If you have identified the right product to sell, you can then proceed to the [Quote process](insure-quote.md).
+
+During the quote process, you will be listing products and pricing together.

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 9
-slug: /embedded-insurance-list-products
+sidebar_position: 2
+slug: /embedded-insurance/list-products
 id: insure-list-products
 ---
 
-# Embedded Insurance: List Products
+# List Insurance Products
 
 At any given time, your organization can list the products assigned to it which are available for distribution. The products available to your organization will depend on the geography of your customers, your own needs, and a number of other factors.
 
@@ -52,11 +52,11 @@ Sitata's insurance products generally fall into three categories:
 
 2. Tiered plans. These are your typical "bronze", "silver", "gold" plans where the customer chooses one of three options.
 
-3. Base plans with optional upgrades. These plans offer some levels of personalization for each policy whereby basic needs are covered and optional benefits (e.g. rental car coverage, increased health or baggage limits, adventure sports coverage, etc) can be selected by the customer.
+3. Bundle Plans. These are usually a base plan with optional upgrades or "bundles" of coverage. These plans offer some levels of personalization for each policy whereby basic needs are covered and optional benefits (e.g. rental car coverage, increased health or baggage limits, adventure sports coverage, etc) can be selected by the customer.
 
 :::info
 
-If your organization is offering travel insurance, you will most likely need to be prepared to address Tiered Plans or Base plans or potentially both depending upon the structure of the program you have arranged with us. It might be best to code for all three structure types today so that your organization can develop additional offers with Sitata further down the road.
+If your organization is offering travel insurance, you will most likely need to be prepared to address Tiered Plans or Bundle Plans or potentially both depending upon the structure of the program you have arranged with us. It might be best to code for all three structure types today so that your organization can develop additional offers with Sitata further down the road.
 
 :::
 
