@@ -8,16 +8,13 @@ id: insure-quotes
 
 Generating a list of products with associated pricing is known as a generating a quote. The Sitata API provides a single, convenient API endpoint to do so. Depending upon the type of product offered, the request needs to specify a number of parameters. For example, for a travel-related product, we may require some `Trip` data. 
 
-For full
-
+For full API documentation, [please click here](/api#tag/Products/paths/~1api~1v2~1products~1with_quotes/post).
 
 ## Travel Insurance Quote
 
 To request a quote for all products, you can issue a `POST` request to the following API endpoint:
 
 `https://www.sitata.com/api/v2/products/with_quotes`
-
-For full API documentation, [please click here](/api#tag/Products/paths/~1api~1v2~1products~1with_quotes/post).
 
 
 A typical travel insurance request body should contain the following parameters:
@@ -62,7 +59,10 @@ A typical travel insurance request body should contain the following parameters:
 		// specifying a list of destinations is helpful 
         // for producing the best price available as well
         // as for Sitata's other services such as real-time
-        // threat notifications (Trip Alerts).
+        // threat notifications (Trip Alerts). In general,
+        // specifying cities instead of only countries is better.
+        // To specify a city, use type = 1, the 'country_code',
+        // a 'lat', a 'lng', and a 'friendly_name'.
 		"destinations": [{
 			"country_code": "CH",
 			"entry_date": 1686550712,
@@ -89,25 +89,37 @@ A typical travel insurance request body should contain the following parameters:
 }
 ```
 
+:::warning
+
+Please ensure all of your dates are future dates. You can use unix timestamps or ISO 8601 format.
+
+:::
+
+:::info
+
+When creating Subscriptions, only create Users for those who wish to log into Sitata and receive communications from Sitata. Therefore, most insurance-related purchases only create a single Subscription with a single user and all other people are listed as Beneficiaries.
+
+:::
+
 The following minimum data parameters are generally necessary for a travel insurance quote.
 
 | Attribute | Type | Description |
 | --------- | ---- | ----------- |
 | currency_code | String | The currency requested for pricing when generating the quote
 | country_code | String | The country of origin of the traveller
-| subscriptions | Object | Subscription or "Plan Holder" information
-| subscriptions.beneficiaries | Array | A list of other people that require travel protection on the same policy. Typically a spouse or dependent child.
-| subscriptions.user | Object | The main plan holder of the policy. At a minimum, birthday, email, name are required
-| trip | Object | The travel details of the trip
-| trip.destinations | Array | A list of destinations (usually country or city).
+| subscriptions | [`Subscription`] | Subscription or "Plan Holder" information
+| subscriptions.beneficiaries | [`Beneficiary`] | A list of other people that require travel protection on the same policy. Typically a spouse or dependent child.
+| subscriptions.user | `User` | The main plan holder of the policy. At a minimum, birthday, email, name are required
+| trip | `Trip` | The travel details of the trip
+| trip.destinations | [`Destination`] | A list of destinations (usually country or city).
 | trip.start | Integer | The start time of the trip
 | trip.finish | Integer | The finish time of the trip
 | trip.total_cost | Integer | Total cost is the trip cost which generally includes all non-refundable tickets, hotels, events, etc for ALL travellers. Note currencies in Sitata are specified in the base unit. For example, cents for USD, yen for JPY.
-| trip.currency_code | Integer | The currency used to specify the total_cost
+| trip.currency_code | String | The currency used to specify the total_cost
 
 :::info
 
-Remember: Other Trip attributes can and should be specified when available. This includes [itinerary items such as hotels, flights, etc](/api#tag/Trips/paths/~1api~1v2~1trips~1{trip_id}~1segments/get). When Sitata has itinerary information our additional services will create a better travel experience. For example, we can provide flight tracking and our real-time threat notifications (Trip Alerts) will be specific to the User's local locations.
+Remember: If you are specifying trip details, the more granular details the better. This means you should try to specify cities instead of countries for [Destinations](/api#section/Destinations) (needs a `lat`, a `lng`, `type = 1`, `county_code` and `friendly_name`). In addition, other Trip attributes can and should be specified when available. This includes [itinerary items such as hotels, flights, etc](/api#tag/Trips/paths/~1api~1v2~1trips~1{trip_id}~1segments/get). When Sitata has itinerary information our additional services will create a better travel experience. For example, we can provide flight tracking and our real-time threat notifications (Trip Alerts) will be specific to the User's local locations.
 
 :::
 
@@ -314,7 +326,7 @@ The following are the key components of a product quote from Sitata.
 | num_people | Integer | The total number of people covered by the protection plan.
 | num_subscriptions | Integer | The number of people who had user accounts created for them when the protection plan was purchased. These users are able to log into the platform, use the mobile application, receive various services, and file claims online.
 | product_quote_group_id | String | The unique identifier of the quote.
-| products | Array | The list of products available in the quote.
+| products | [`Product`] | The list of products available in the quote.
 | splits | Array | The list of revenue available for different parties associated with distribution of the product.
 
 ## Specifying Products

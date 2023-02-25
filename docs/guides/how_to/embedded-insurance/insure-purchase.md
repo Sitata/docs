@@ -8,6 +8,8 @@ id: insure-purchase
 
 After receiving a list of products and pricing, the next step is to execute a purchase. To execute a purchase, you simply need to specify the same parameters you used for a quote, on our Subscription endpoint.
 
+For full API documentation, [please click here](/api#tag/Products/).
+
 A typical purchase request body should contain the following parameters:
 
 ```
@@ -82,6 +84,18 @@ A typical purchase request body should contain the following parameters:
 	}
 }
 ```
+
+:::info
+
+When creating Subscriptions, only create Users for those who wish to log into Sitata and receive communications from Sitata. Therefore, most insurance-related purchases only create a single Subscription with a single user and all other people are listed as Beneficiaries.
+
+:::
+
+:::warning
+
+Please ensure all of your dates are future dates. You can use unix timestamps or ISO 8601 format.
+
+:::
 
 Note how each `Subscription` object must specify the product identifiers that are being purchased under a `product_ids` field.
 
