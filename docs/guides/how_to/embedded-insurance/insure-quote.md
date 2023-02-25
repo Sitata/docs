@@ -8,8 +8,17 @@ id: insure-quotes
 
 Generating a list of products with associated pricing is known as a generating a quote. The Sitata API provides a single, convenient API endpoint to do so. Depending upon the type of product offered, the request needs to specify a number of parameters. For example, for a travel-related product, we may require some `Trip` data. 
 
+For full
+
 
 ## Travel Insurance Quote
+
+To request a quote for all products, you can issue a `POST` request to the following API endpoint:
+
+`https://www.sitata.com/api/v2/products/with_quotes`
+
+For full API documentation, [please click here](/api#tag/Products/paths/~1api~1v2~1products~1with_quotes/post).
+
 
 A typical travel insurance request body should contain the following parameters:
 
@@ -98,7 +107,7 @@ The following minimum data parameters are generally necessary for a travel insur
 
 :::info
 
-Remember: Other Trip attributes can and should be specified when available. This includes itinerary items such as hotels, flights, etc. When Sitata has itinerary information our additional services will create a better travel experience. For example, we can provide flight tracking and our real-time threat notifications (Trip Alerts) will be specific to the User's local locations.
+Remember: Other Trip attributes can and should be specified when available. This includes [itinerary items such as hotels, flights, etc](/api#tag/Trips/paths/~1api~1v2~1trips~1{trip_id}~1segments/get). When Sitata has itinerary information our additional services will create a better travel experience. For example, we can provide flight tracking and our real-time threat notifications (Trip Alerts) will be specific to the User's local locations.
 
 :::
 
@@ -282,6 +291,12 @@ The response from our API will be a list of products with associated pricing.
 }
 ```
 
+:::warning
+  
+Please note that if a Benefit has a null limit instead of a numerical value, it means that the coverage is "included" or 100%. For example, for many plans the Emergency Evacuation benefit will have no numerical limit and this means that all evacuation costs are covered.
+
+:::
+
 ## Important Components of a Quote
 
 The following are the key components of a product quote from Sitata.
@@ -291,7 +306,7 @@ The following are the key components of a product quote from Sitata.
 | cost | Integer | Cost is the price in the smallest unit. e.g. pence for GBP
 | taxes | Integer | Additional taxes in the smallest unit. e.g. pence fo GBP
 | insurance_taxes | Integer | Any insurance specific taxes in the smallest unit. e.g. pence for GBP
-| cost_modifier | Decimal | The multiplying factor to convert the cost into a reasonable unit for display. e.g. 2180 * 0.01 = 21.80 GBP
+| cost_modifier | Double | The multiplying factor to convert the cost into a reasonable unit for display. e.g. 2180 * 0.01 = 21.80 GBP
 | cost_symbol | String | A character used to display the type of currency used. e.g. "£" for GBP.
 | currency_code | String | The currency used in the quote.
 | start | String | The start of the coverage period.

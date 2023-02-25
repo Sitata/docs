@@ -8,13 +8,22 @@ id: insure-list-products
 
 At any given time, your organization can list the products assigned to it which are available for distribution. The products available to your organization will depend on the geography of your customers, your own needs, and a number of other factors.
 
-Although you can simultaneously list your products with pricing, it can be useful at times to fetch the list of products on their own. To do so, simply issue the following API request:
+Although you can simultaneously list your products with pricing, it can be useful at times to fetch the list of products on their own. To do so, simply issue a `GET` request to the following API request:
 
 `https://www.sitata.com/api/v2/products?currency_code=CAD&country_code=es`
 
-Note that the `country_code` should be the customer's origin country. Both `currency_code` and `country_code` should be provided.
+Note that the `country_code` should be the customer's origin country using [ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Both `currency_code` and `country_code` should be provided.
 
-Our server will respond with the list of products available for distribution.
+Our server will respond with the list of products available for distribution. 
+
+For full API documentation, [please click here](/api#tag/Products/paths/~1api~1v2~1products~1/get).
+
+
+:::warning
+
+Please note that some of the product and benefit attributes such as `description` will be in [Markdown format](https://www.markdownguide.org/basic-syntax/). Make sure you use an appropriate Markdown library to present this information to the end user for better formatting.
+
+:::
 
 
 ## Types of Products
@@ -34,7 +43,7 @@ The Sitata plans contain the following key identifiers:
 | sitata-daily | Sitata Plus Roaming | A subscription to Sitata Plus which is activated by location sharing and roaming through the Sitata App.
 | sitata-daily-activation | Sitata Plus Roaming Activation fee | A one-time fee to activate Sitata Plus Roaming
 
-In addition to the Sitata Travel Protection Plans, your organization might have access to our other insurance products.
+In addition to these plans, your organization might have access to our other insurance products.
 
 :::info
 
