@@ -45,3 +45,26 @@ Note the above snippet uses the [Lodash library](https://lodash.com/) for easy s
 If you have identified the right product to sell, you can then proceed to the [Quote process](insure-quote.md).
 
 During the quote process, you will be listing products and pricing together.
+
+## Display of tiered products
+
+After you have received a quote for tiered products, you should display it to your customers.
+
+<div style={{textAlign: 'center'}}>
+
+![Results only](/img/insurance/tiered-products-screen.jpeg)
+
+</div>
+
+Tiered products should have the same benefits listed in the same order and so generating html for visual display should be fairly trivial. Note that our layout in the image above has the following key components:
+
+1. Each product is arranged by `sort_order`.
+2. Each benefit of each product is also arranged and displayed by `sort_order`. This works because in a tiered set of products, the number of benefits and the sort order of each is the same.
+3. The benefit description is the same for the matching benefits between products. Therefore, we use a single information icon and a popup modal to display the benefit description.
+4. The cost of the quote is shown along with each Product.
+5. The limit of each benefit is shown for each Benefit/Product pairing.
+6. A list of product-based FAQs is accessible.
+7. The product disclaimer is displayed for each product selected (not shown above). 
+8. The product documents for each product selected is also displayed (filtered by the user's language - not shown above)
+
+It's important that you address the above points in your own user interface so that your users have the best purchasing experience. 

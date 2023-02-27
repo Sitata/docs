@@ -313,6 +313,8 @@ Please note that if a Benefit has a null limit instead of a numerical value, it 
 
 The following are the key components of a product quote from Sitata.
 
+For full documentation about a Product Quote, [click here.](http://localhost:3000/api#tag/Product-Quote)
+
 | Attribute | Type | Description | 
 | --------- | ---- | ----------- | 
 | cost | Integer | Cost is the price in the smallest unit. e.g. pence for GBP

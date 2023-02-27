@@ -8,7 +8,7 @@ id: insure-purchase
 
 After receiving a list of products and pricing, the next step is to execute a purchase. To execute a purchase, you simply need to specify the same parameters you used for a quote, on our Subscription endpoint.
 
-For full API documentation, [please click here](/api#tag/Products/).
+For full API documentation, [please click here](/api#tag/Organization-greater-Subscriptions/paths/~1api~1v2~1org~1{company_id}~1subscriptions/post).
 
 A typical purchase request body should contain the following parameters:
 
