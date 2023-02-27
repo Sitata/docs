@@ -20,7 +20,7 @@ Creating an Alert Filter for your organization will block Alerts and Advisories 
 
 :::info
 
-When you create a filter for your organization, no `TripAlert` records will be created if the filter matches the published Alert. If a matching Alert Filter is owned by the user, a `TripAlert` record will still be created, but the notification will not be delivered to the user. In this way, your organization can still have visibility to a potential affected user - even if that user has chosen not to receive an individual notficiation about it.
+When you create a filter for your organization, no `TripAlert` records will be created if the filter matches the published Alert. If a matching Alert Filter is owned by the user, a `TripAlert` record will still be created, but the notification will not be delivered to the user. In this way, your organization can still have visibility to a potential affected user - even if that user has chosen not to receive an individual notification about it.
 
 :::
 

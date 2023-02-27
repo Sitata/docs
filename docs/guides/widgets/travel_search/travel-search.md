@@ -28,7 +28,7 @@ function startWidget() {
 window.document.addEventListener('sitata:travelSearchReady', startWidget)
 ```
 
-Lastly, you should initalize the widget with any necessary configuration options.
+Lastly, you should initialize the widget with any necessary configuration options.
 
 ```javascript
 function startWidget() {
