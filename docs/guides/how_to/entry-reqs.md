@@ -45,7 +45,7 @@ One slightly confusing part about the data structure is our use of the term “o
 
 :::caution
 
-Another important point to note is how our affected counntries list works. If affected_countries is empty, it should be interpreted as a global rule. i.e. all countries are affected.
+Another important point to note is how our affected countries list works. If affected_countries is empty, it should be interpreted as a global rule. i.e. all countries are affected.
 
 :::
 
@@ -111,6 +111,10 @@ GET https://www.sitata.com/api/v2/entry_requirements?departure=DE&destination=IN
 
 If this parameter is omitted, our data points will likely contain information about both unvaccinated and vaccinated scenarios. This is in part so we can support legacy clients, but also we believe it is important for people to realize that there are fewer restrictions if they are vaccinated.
 
+## Which Dates should I Use?
+
+You will note that a number of date fields are returned: `created_at`, `updated_at`, and `effective_as_of`. If you are displaying the concept of last updated, then we recommend using `effective_as_of` instead of `updated_at`. This is because this date represents the last time the team will have checked the data, even if it was not updated.
+
 ## Extra Data
 For some types of Entry Requirements, there may be extra associated data in a metadata type field called `extras`. This field is a key/value mapping of various extra bits of information for a particular requirement.
 
@@ -125,4 +129,5 @@ This data entry falls under the entry requirement `type 8`. In this entry, the `
 ### Which vaccines are known to be accepted?
 
 This data entry falls under the entry requirement `type 10`. In this entry, the `extras` mapping will contain a field called `vacc_list` which corresponds to a list of integers.
+
 

@@ -108,3 +108,6 @@ GET https://www.sitata.com/api/v2/travel_restrictions?departure=DE&destination=I
 
 If this parameter is omitted, our data points will likely contain information about both unvaccinated and vaccinated scenarios. This is in part so we can support legacy clients, but also we believe it is important for people to realize that there are fewer restrictions if they are vaccinated.
 
+## Which Dates should I Use?
+
+You will note that a number of date fields are returned: `created_at`, `updated_at`, and `effective_as_of`. If you are displaying the concept of last updated, then we recommend using `effective_as_of` instead of `updated_at`. This is because this date represents the last time the team will have checked the data, even if it was not updated.
