@@ -331,6 +331,12 @@ For full documentation about a Product Quote, [click here.](http://localhost:300
 | products | [`Product`] | The list of products available in the quote.
 | splits | Array | The list of revenue available for different parties associated with distribution of the product.
 
+:::info
+
+Note that Sitata might recommend certain products be selected for purchase before any interaction from the End-User. These products will have their `preselected` field set to `true`. 
+
+:::
+
 ## Specifying Products
 
 The default behavior of the API is to respond with all products available to your organization given the parameters you have requested. In insurance-related products are unavailable, the API will respond with Sitata's Assistance plans.
