@@ -5,7 +5,7 @@ title: Getting Started
 
 # Embedded Travel Assistance and Insurance Sales Widget
 
-![Map Image](/img/widgets/covid-flight-search.jpg)
+![Map Image](/img/widgets/insurance.jpeg)
 
 Sitata is able to distribute a number of different types of insurance and assistance products in a variety of different configurations depending on geographies, type of insurance requested, type of trip, and many other factors. This can make designing an API workflow challenging. 
 
