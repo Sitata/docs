@@ -18,6 +18,10 @@ A typical purchase request body should contain the following parameters:
 	"currency_code": "GBP",
     // country of origin
     "country_code": "HK",
+    // region code
+    // you can include region code for products that need it. i.e. USA products.
+    // "region_code": "US-CA",
+    //
     // you can use the metadata field to store important
     // string-based information associated with the purchase.
     "metadata": {
