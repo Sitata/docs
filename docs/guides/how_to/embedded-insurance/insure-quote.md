@@ -25,6 +25,8 @@ A typical travel insurance request body should contain the following parameters:
 	"currency_code": "GBP",
     // country of origin
     "country_code": "HK",
+    // region code - typically used for US states
+    "region_code": null,
     // user information
 	"subscriptions": [{
         // beneficiaries are other people that require
@@ -107,6 +109,7 @@ The following minimum data parameters are generally necessary for a travel insur
 | --------- | ---- | ----------- |
 | currency_code | String | The currency requested for pricing when generating the quote
 | country_code | String | The country of origin of the traveller
+| region_code | String | The region (state or province) of the traveller. Used mostly for US departures. Uses [ISO 3166-2 codes](https://en.wikipedia.org/wiki/ISO_3166-2:US).
 | subscriptions | [`Subscription`] | Subscription or "Plan Holder" information
 | subscriptions.beneficiaries | [`Beneficiary`] | A list of other people that require travel protection on the same policy. Typically a spouse or dependent child.
 | subscriptions.user | `User` | The main plan holder of the policy. At a minimum, birthday, email, name are required
