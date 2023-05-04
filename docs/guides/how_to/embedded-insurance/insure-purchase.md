@@ -304,3 +304,7 @@ The response will include a list of the Subscriptions created. For example:
 
 Note that each `Subscription` in the list will contain important information such as the `human_id` of the Subscription, the list of Invoices with associated `sitata_invoice_id`, the primary `User` (or policyholder), and the list of `Product`s with associated `Benefit`s.
 
+## Retries
+
+In the rare event that your purchase request does not go through to Sitata due to network issues, downtime, or any other reason, you should consider the use of a queueing architecture that can re-try if the original purchase request does not succeed. In this way, your organization will not be stuck in a negative situation where you have promised your customer an insurance purchase that never actually completed.
+
